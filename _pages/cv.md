@@ -12,6 +12,4 @@ toc:
 
 ## Mi CV
 
-{% include base_path %}
-
-<embed src="{{ site.baseurl }}/files/CV_Miriam.pdf" width="100%" height="700" type='application/pdf'>  
+<embed src="{{ site.baseurl }}/assets/pdf/CV_Miriam.pdf" width="100%" height="700" type='application/pdf'>
