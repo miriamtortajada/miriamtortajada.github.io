@@ -24,9 +24,7 @@ layout: default
 
   <article>
     <div class="cv">
-      {% unless site.data.resume %}
-        <p>No hay información de CV disponible.</p>
-      {% else %}
+      {% if site.data.resume %}
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
           <div class="card mt-3 p-3">
@@ -48,7 +46,9 @@ layout: default
             </div>
           </div>
         {% endfor %}
-      {% endunless %}
+      {% else %}
+      <!-- No hay nada que mostrar si no hay información -->
+      {% endif %}
       
       <!-- Incrustación del PDF -->
       <div class="pdf-embed mt-4">
