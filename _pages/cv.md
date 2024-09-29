@@ -7,5 +7,5 @@ nav_order: 5
 cv_pdf: CV_Miriam.pdf
 description: You can download my CV here.
 toc:
-  sidebar: left
+  sidebar: false
 ---
