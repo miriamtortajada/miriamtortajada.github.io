@@ -12,4 +12,4 @@ toc:
 
 ## Mi CV
 
-<embed src="{{ site.baseurl }}/assets/pdf/CV_Miriam.pdf" width="100%" height="700" type='application/pdf'>
+<object data="{{ site.baseurl }}/assets/pdf/CV_Miriam.pdf" width="100%" height="700" type='application/pdf'></object>
