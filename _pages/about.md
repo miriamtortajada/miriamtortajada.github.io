@@ -9,7 +9,7 @@ profile:
   image: foto_prof.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Miriam Tortajada, Postdoctoral fellow</p>
+    <p>Miriam Tortajada, PhD</p>
     <p>Cognitive Neuroscience</p>
     <p>Universidad de Granada</p>
 
