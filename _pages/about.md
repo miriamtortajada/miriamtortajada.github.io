@@ -11,15 +11,15 @@ profile:
   more_info: >
     <p>Miriam Tortajada, PhD</p>
     <p>Cognitive Neuroscience</p>
-    <p>Universidad de Granada</p>
+    <p>University of Murcia</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Miriam Tortajada, a postdoctoral researcher at the University of Granada, working on the [CONNECTS](https://sites.google.com/view/connects-site/about-connects?authuser=0) project. I got my PhD in Experimental Psychology at the University of Murcia (Spain). My research field is Cognitive Neuroscience, specifically memory and attention. During my PhD, I focused on studying working memory related processes, mostly using electrophysiological methods. During this time, I have learned about EEG analysis techniques (MVPA and oscillations), which is one of the parts that I enjoy the most and I'm always open to work in new projects that require learning new methods.
+Hi! I'm Miriam Tortajada, currently an early career researcher at the University of Murcia (UMU). My current research is focused on understanding how mental representations are shaped by our semantic expectations, and how this influences the way we perceive and remember them.
 
-I've also collaborated in several works related to different attentional states, such as vigilance or mind-wandering.
+Previously, I was a postdoctoral researcher at the University of Granada, working on the [CONNECTS](https://sites.google.com/view/connects-site/about-connects?authuser=0) project, with which I remain actively involved. I got my PhD in Cognitive Neuroscience from UMU, where I studied various aspects of Working Memory, especially how information is removed or deprioritized. During this time, I have learned about EEG analysis (MVPA and oscillations). I really enjoy data analysis and I'm always open to working on projects that require thinking about or learning new methods.
 
-I'm also very enthusiastic about open science and implementing research practices that could improve the reproducibility of our research.
+I've also collaborated in several works related to different attentional states, such as vigilance or mind-wandering. And I'm also very enthusiastic about open science and implementing research practices that could improve the reproducibility of our research.
