@@ -77,27 +77,26 @@
           {% endfor %}
         {%- endif -%}
 
+        {%- assign is_others = false -%}
+        {%- if author.last == 'others' -%}
+          {%- assign is_others = true -%}
+        {%- endif -%}
         {%- if forloop.length > 1 -%}
-          {% if forloop.first == false %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
-        {% endif %}
-        {%- if author_is_self -%}
-          <em>
-            {{- author.first }}
-            {{ author_last_html -}}
-          </em>
+          {%- if forloop.first == false -%},&nbsp;{%- endif -%}
+          {%- if forloop.last and author_array_limit == author_array_size and is_others == false -%}and&nbsp;{%- endif -%}
+        {%- endif -%}
+        {%- if is_others -%}
+          <i>et al.</i>
+        {%- elsif author_is_self -%}
+          <em>{{ author.first }} {{ author_last_html }}</em>
         {%- else -%}
           {%- if coauthor_url -%}
-            <a href="{{ coauthor_url }}">
-              {{- author.first }}
-              {{ author_last_html -}}
-            </a>
+            <a href="{{ coauthor_url }}">{{ author.first }} {{ author_last_html }}</a>
           {%- else -%}
-            {{- author.first }}
-            {{ author_last_html -}}
-          {% endif %}
+            {{ author.first }} {{ author_last_html }}
+          {%- endif -%}
         {%- endif -%}
-      {% endfor %}
+      {%- endfor -%}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
@@ -246,6 +245,12 @@
       {% endif %}
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% endif %}
+      {% if entry.materials %}
+        <a href="{{ entry.materials }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Materials</a>
+      {% endif %}
+      {% if entry.preregistration %}
+        <a href="{{ entry.preregistration }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Preregistration</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
