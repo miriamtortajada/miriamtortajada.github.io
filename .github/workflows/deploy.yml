@@ -73,7 +73,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2.2"
-          bundler-cache: true
+          bundler-cache: false
+      - name: Install dependencies 💎
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
