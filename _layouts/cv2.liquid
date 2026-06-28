@@ -50,14 +50,27 @@ layout: default
       <!-- No hay nada que mostrar si no hay información -->
       {% endif %}
       
-      <!-- Incrustación del PDF -->
+      <!-- PDF embed -->
       <div class="pdf-embed mt-4">
         {% if page.cv_pdf %}
-          <object data="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" type="application/pdf" width="100%" height="800px">
-            <p>Your browser does not support PDF embedding.
-              <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer">Click here to download the CV</a>.
-            </p>
-          </object>
+          {% assign pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+          <!-- Desktop: use object tag -->
+          <div class="d-none d-md-block">
+            <object data="{{ pdf_url }}" type="application/pdf" width="100%" height="800px">
+              <p>Your browser does not support PDF embedding.
+                <a href="{{ pdf_url }}" target="_blank" rel="noopener noreferrer">Click here to download the CV</a>.
+              </p>
+            </object>
+          </div>
+          <!-- Mobile: use Google Docs Viewer -->
+          <div class="d-md-none">
+            <iframe src="https://docs.google.com/gview?url={{ site.url }}{{ pdf_url }}&embedded=true" width="100%" height="600px" style="border: none;"></iframe>
+            <div class="text-center mt-2">
+              <a href="{{ pdf_url }}" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-file-pdf"></i> Download CV
+              </a>
+            </div>
+          </div>
         {% endif %}
       </div>
       
